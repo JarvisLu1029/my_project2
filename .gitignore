@@ -1,0 +1,5 @@
+backend_api/products/__pycache__/
+backend_api/chromedriver-linux64/
+backend_api/google-chrome-stable_current_amd64.deb
+backend_api/chromedriver-linux64.zip
+test.ipynb

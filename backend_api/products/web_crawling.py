@@ -4,7 +4,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service as ChromeService
 from webdriver_manager.chrome import ChromeDriverManager
-
+import re
 
 def create_driver():
     # 創建一個 Options 物件
@@ -122,7 +122,7 @@ def carrefour_data(queue, commodity):
         info_dict[f'{i}'] = {
             'commodity_name': commodity_names[i].text,
             'commodity_image': commodity_images[i].get_attribute('src'),
-            'commodity_value': value_elements[i].text,
+            'commodity_value': value_elements[i].text.replace('$', ''),
             'commodity_link': commodity_links[i].get_attribute('href'),
             'store': '家樂福'
             }
@@ -144,7 +144,7 @@ def pxmart_data(queue, commodity):
         info_dict[f'{i}'] = {
             'commodity_name': commodity_names[i].text,
             'commodity_image': commodity_images[i].get_attribute('src'),
-            'commodity_value': value_elements[i].text,
+            'commodity_value': value_elements[i].text.replace('$', ''),
             'commodity_link': commodity_links[i].get_attribute('href'),
             'store': '全聯'
             }
