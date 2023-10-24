@@ -1,0 +1,173 @@
+.product img {
+    width: 100px;
+    height: 100px;
+}
+
+.product {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    display: inline-block;
+    width: 200px;
+    height: 300px;
+}
+
+.card {
+    float: left;
+    width: 188px;
+    height: 360px;
+    padding: .8em;
+    background: #f5f5f5;
+    position: relative;
+    overflow: visible;
+    margin: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.card-img {
+    background-color: #ffcaa6;
+    height: 60%;
+    width: 100%;
+    border-radius: .5rem;
+    transition: .3s ease;
+    z-index: 5;
+}
+
+.card img {
+    background-color: #ffcaa6;
+    height: 100%;
+    width: 100%;
+    border-radius: .5rem;
+    transition: .3s ease;
+    z-index: 5;
+}
+
+.card-info {
+    height: 25%;
+    width: 100%;
+    padding-top: 5%;
+    margin-bottom: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+svg {
+    width: 20px;
+    height: 20px;
+}
+
+.card-footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    border-top: 1px solid #ddd;
+}
+
+/*Text*/
+.text-title {
+    position: relative;
+    height: 49px;
+    font-weight: 900;
+    font-size: 85%;
+    line-height: 1.5;
+    overflow: hidden;
+    /* 隐藏超出容器范围的文字 */
+    text-overflow: ellipsis;
+    /* 使用省略号代表被隐藏的文字 */
+}
+
+.text-title:hover::before {
+    content: attr(data-text);
+    /* 將偽元素的內容設置為元素的 data-text 屬性值（全部文字） */
+    position: absolute;
+    /* 設置絕對定位，相對於父元素定位 */
+    top: 100%;
+    /* 將小視窗定位在元素下方 */
+    left: 0;
+    padding: 5px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    white-space: normal;
+    /* 允許小視窗中的文字換行 */
+}
+
+span.text-title {
+    font-weight: 900;
+    font-size: 130%;
+    line-height: 1.5;
+    overflow: hidden;
+    /* 隐藏超出容器范围的文字 */
+    text-overflow: ellipsis;
+    /* 使用省略号代表被隐藏的文字 */
+}
+
+.text-body {
+    font-size: .9em;
+    padding-left: 60px;
+    font-weight: 900;
+    color: green;
+    /* padding: 10px; */
+}
+
+/*Button*/
+.card-button {
+    border: 1.5px solid #252525;
+    display: flex;
+    padding: .3em;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: .3s ease-in-out;
+    margin-bottom: 10px;
+}
+
+/*Hover*/
+.card-img:hover {
+    transform: translateY(-25%) scale(1.5);
+    box-shadow: rgba(226, 196, 63, 0.25) 0px 13px 47px -5px, rgba(180, 71, 71, 0.3) 0px 8px 16px -8px;
+    z-index: 10;
+}
+
+.card-button:hover {
+    border: 1px solid #ffcaa6;
+    background-color: #ffcaa6;
+}
+
+
+.pagination-list {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 0 auto;
+}
+
+.pagination-item {
+    margin-right: 10px;
+    position: relative;
+}
+
+.pagination-item:last-child {
+    margin-right: 0;
+}
+
+.select-button {
+    font-size: 17px;
+    padding: 0.5em 2em;
+    border: transparent;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    background: dodgerblue;
+    color: white;
+    border-radius: 4px;
+    margin-left: 20px;
+}
+
+.select-button:hover {
+    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, rgba(30, 144, 255, 1) 0%, rgba(0, 212, 255, 1) 100%);
+}
+
+.select-button:active {
+    transform: translate(0em, 0.2em);
+}

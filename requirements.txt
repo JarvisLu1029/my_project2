@@ -1,0 +1,5 @@
+selenium
+django
+django-cors-headers
+djangorestframework
+webdriver-manager
