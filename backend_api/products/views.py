@@ -3,7 +3,7 @@ from django.shortcuts import render
 from django.views.decorators.csrf import csrf_exempt
 from rest_framework.decorators import api_view
 
-from .web_crawling import carrefour_data, pchome_data, pxmart_data
+from .web_crawling import carrefour_data, pchome_data, pxmart_data, momo_data
 import threading, queue
 
 # Create your views here.
@@ -14,7 +14,7 @@ def commodity_infos(request):
     commodity = request.GET.get('keyword')
     print(commodity)
     # 將 web_crawling 裡要執行的 func 放在這個 list
-    tasks = [carrefour_data, pchome_data, pxmart_data]
+    tasks = [carrefour_data, pchome_data, pxmart_data, momo_data]
     q = queue.Queue()
     all_thread = []
 

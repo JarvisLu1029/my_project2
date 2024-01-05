@@ -4,7 +4,6 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service as ChromeService
 from webdriver_manager.chrome import ChromeDriverManager
-import re
 
 def create_driver():
     # 創建一個 Options 物件
@@ -17,8 +16,8 @@ def create_driver():
     chrome_options.add_argument("--no-sandbox")
     chrome_options.add_argument("--disable-dev-shm-usage")
 
-    # driver = webdriver.Chrome(ChromeDriverManager("118.0.5993.70").install(), options=chrome_options)
-    driver = webdriver.Chrome(service=ChromeService('/home/backend_api/chromedriver-linux64/chromedriver'), options=chrome_options)
+    driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()), options=chrome_options)
+    # driver = webdriver.Chrome(service=ChromeService('/home/backend_api/chromedriver-linux64/chromedriver'), options=chrome_options)
     return driver
 
 def scroll_height(driver):
